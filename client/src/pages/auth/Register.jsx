@@ -10,6 +10,7 @@ export default function Register() {
     const email = useRef()
     const password = useRef()
     const password2 = useRef(undefined)
+    const wallet_address = useRef()
 
 
     async function onSubmitForm(event) {
@@ -19,7 +20,8 @@ export default function Register() {
             last_name: last_name.current.value,
             email: email.current.value,
             password: password.current.value,
-            password2: password2.current.value
+            password2: password2.current.value,
+            wallet_address: wallet_address.current.value
           };
 
         setLoading(true)
@@ -54,6 +56,9 @@ export default function Register() {
                 </div>
                 <div className="mb-3">
                     <input type="password" placeholder='Confirm Password' autoComplete='off' className='form-control' id="passwordConfirmation" ref={password2} />
+                </div>
+                <div className="mb-3">
+                    <input type="text" placeholder='Wallet Address' autoComplete='off' className='form-control' id="wallet_address" ref={wallet_address} />
                 </div>
                 <div className="mb-3">
                     <button disabled={loading} className='btn btn-success' type="submit">Register</button>
