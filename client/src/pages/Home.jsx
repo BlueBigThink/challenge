@@ -22,9 +22,7 @@ export default function Home() {
                     throw new Error('Invalid Ethereum address')
                 }
                 const weiBalance = await web3.eth.getBalance(address);
-                console.log(weiBalance)
                 const ethBalance = web3.utils.fromWei(weiBalance, 'ether');
-                console.log(ethBalance)
                 setBalance(ethBalance)
             } catch (err) {
                 throw new Error('Error fetching balance')
