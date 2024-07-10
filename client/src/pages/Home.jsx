@@ -15,7 +15,7 @@ export default function Home() {
         const address = user.wallet_address
         const fetchBalance = async () => {
             if(!address) return;
-            //98cfc59c4cdf46e69aec779b57b175db : This is my Infura ID
+            //98cfc59c4cdf46e69aec779b57b175db : This is my Infura ID, This has to be stored in .env file
             const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/98cfc59c4cdf46e69aec779b57b175db'));
             try {
                 if(!isAddress(address)){
